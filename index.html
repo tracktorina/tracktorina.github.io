@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>OAuth</h1>
+					<h3>(Open Authorization)</h3>
+					<br>
+					<p>Prepared by Maria Prudnikova</p>
+				</section>
+				<section>
+					<section><h2>What is OAuth?</h2></section>
+					<section>
+							<h3>Roles</h3>
+							<ul>
+								<li>resource owner (User)</li>
+								<li>resource server</li>
+								<li>client (App)</li>
+								<li>authorization server</li>
+							</ul>
+						</section>
+						<section>
+							<h3>Protocol Flow</h3>
+							<img src="./assets/OAuth-protocol-flow.png" alt="Abstract Protocol Flow">
+						</section>
+				</section>
+				<section>
+					<h3>Authorization Flow</h3>
+					<ul>
+						<li>authorization code</li>
+						<li>implicit</li>
+						<li>resource owner password credentials</li>
+						<li>client credentials</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h3>1. Authorization Code Flow</h3>
+						<img src="./assets/Authorization Code Flow/Authorization Code Flow.png" alt="Authorization Code Flow">
+					</section>
+					<section>
+						<h4>1.1. Request To Authorization Endpoint</h4>
+						<img src="./assets/Authorization Code Flow/Request To Authorization Endpoint.JPG" alt="Request To Authorization Endpoint">
+					</section>
+					<section>
+						<h4>1.2. Response From Authorization Endpoint</h4>
+						<img src="./assets/Authorization Code Flow/Response From Authorization Endpoint.JPG" alt="Response From Authorization Endpoint">
+					</section>
+					<section>
+						<h4>1.3. Request To Token Endpoint</h4>
+						<img src="./assets/Authorization Code Flow/Request To Token Endpoint.JPG" alt="Request To Token Endpoint">
+					</section>
+					<section>
+						<h4>1.4. Response From Token Endpoint</h4>
+						<img src="./assets/Authorization Code Flow/Response From Token Endpoint.JPG" alt="Response From Token Endpoint">
+					</section>
+				</section>
+				<section>
+					<h3>2. Implicit Flow</h3>
+					<img src="./assets/Implicit Flow/Implicit Flow.png" alt="Implicit Flow">
+				</section>
+				<section>
+					<h3>3. Resource Owner Password Credentials Flow</h3>
+					<img src="./assets/Resource Owner Password Credentials Flow/Resource Owner Password Credentials Flow.png" alt="Resource Owner Password Credentials Flow">
+				</section>
+				<section>
+					<h3>4. Client Credentials Flow</h3>
+					<img src="./assets/Client Credentials Flow/Client Credentials Flow.png" alt="Resource Owner Password Credentials Flow">
+				</section>
+				<section>
+					<h3>* Refresh Token Flow</h3>
+					<img src="./assets/Refresh Token Flow/Refresh Token Flow.png" alt="Refresh Token Flow">
+				</section>
+				<section style="font-size: 25px;">
+					<h3>Advantages of OAuth 2.0.</h3>
+					<ul>
+						<li>It allows limited access to the user's data and allows accessing when authorization tokens expire.</li>
+						<li>It has ability to share data for users without having to release personal information.</li>
+						<li>It is easier to implement and provides stronger authentication.</li>
+					</ul>
+					<br>
+					<br>
+					<h3>Disadvantages of OAuth 2.0</h3>
+					<ul>
+						<li>If your favorite sites are connected to the central hub and the central account is hacked, then it will
+							lead to serious effects across several sites instead of just one.</li>
+					</ul>
+				</section>
+				<section>
+					<h2>The End</h2>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
